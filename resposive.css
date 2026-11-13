@@ -1,0 +1,153 @@
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .shop-layout {
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .announcement {
+        min-height: 34px;
+        padding: 8px 40px 8px 12px;
+        font-size: 9px;
+    }
+
+    .announcement-close {
+        right: 4%;
+        font-size: 22px;
+    }
+
+    .site-header {
+        height: 70px;
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 31px;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 3;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .main-nav {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        padding: 22px 5%;
+
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .collection-hero {
+        padding: 55px 6% 24px;
+    }
+
+    .collection-hero h1 {
+        font-size: 46px;
+    }
+
+    .collection-hero > p:not(.eyebrow) {
+        margin-bottom: 32px;
+        line-height: 1.7;
+    }
+
+    .shop-layout {
+        display: block;
+        padding: 18px 6% 65px;
+    }
+
+    .filters {
+        margin-bottom: 25px;
+    }
+
+    .filter-title h2 {
+        margin: 10px 0;
+    }
+
+    .filter-group {
+        padding: 14px 0;
+    }
+
+    .products-top {
+        font-size: 8px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 12px;
+    }
+
+    .product-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .product-info > strong {
+        font-size: 10px;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr 1fr;
+        padding: 38px 6% 22px;
+    }
+
+    .site-footer > p {
+        display: none;
+    }
+
+    .site-footer > div {
+        gap: 15px;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .product-info h3 {
+        font-size: 12px;
+    }
+
+}

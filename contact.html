@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Nostra — thoughtfully chosen essentials for everyday living." name="description" />
+
+    <title>Nostra</title>
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Google Font Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN Link from "https://www.jsdelivr.com/"-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./collection.css" />    \
+    <link rel="stylesheet" href="./contact.css">    
+    <link rel="stylesheet" href="./resposive.css" />
+
+</head>
+
+<body>
+
+    <!-- Announcement -->
+    <div class="announcement" id="announcement">
+        <span>
+            Sign Up and <strong>GET 20% OFF</strong> for your first Order
+        </span>
+
+        <button id="closeAnnouncement" class="announcement-close" aria-label="Close promotion" type="button">
+            ×
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header id="home" class="site-header flex items-center justify-between">
+
+        <a class="logo" href="index.html">Nostra</a>
+        <button aria-expanded="false" aria-label="Open navigation" class="menu-toggle">☰</button>
+
+        <nav class="main-nav flex items-center ">
+            <a href="index.html">Home</a>
+            <a href="index.html#new-arrival">New Arrival</a>
+            <a href="index.html#most-wanted">Most Wanted</a>
+            <a href="collections.html">Collections</a>
+            <a class="active" href="contact.html">Contact Us</a>
+        </nav>
+        <a class="header-cta" href="collections.html">Explore shop <span>↗</span></a>
+
+    </header>
+    <main></main>
+
+
+    <body class="min-h-screen bg-white font-sans text-slate-900 antialiased">
+
+        <main class="w-full">
+
+            <!-- Hero Page -->
+            <section class="contact-hero">
+                <div>
+                    <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+                    <h1>Let's start a<br /><em>conversation.</em></h1>
+                    <p>Questions, feedback or just want to say hello? Our little team is all ears.</p>
+                </div>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="contact-layout">
+
+                <div class="contact-details">
+                    <p class="eyebrow">GET IN TOUCH</p>
+                    <h2>Good conversations<br /><em>start here.</em></h2>
+                    <p>Send us a note and we'll get back to you as soon as we can.</p>
+                    <div class="detail-item"><span>EMAIL</span><a
+                            href="mailto:hello@nostra.example">hello@nostra.example ↗</a>
+                    </div>
+                    <div class="detail-item"><span>HOURS</span><strong>Monday – Saturday<br />10:00 AM – 6:00 PM
+                            IST</strong></div>
+                    <div class="detail-item"><span>FOLLOW ALONG</span><strong>@nostra.everyday</strong></div>
+                </div>
+
+                <form class="contact-form flex flex-col" id="contact-form">
+                    <div class="form-row">
+                        <label>Your name
+                            <input name="name" placeholder="e.g. Alex Morgan" required="" type="text" /></label>
+                        <label>Email address<input name="email" placeholder="you@example.com" required=""
+                                type="email" /></label>
+                    </div>
+                    <label>What is this about?
+                        <select name="subject" required="">
+                            <option disabled="" selected="" value="">Choose a topic</option>
+                            <option>Product enquiry</option>
+                            <option>Order support</option>
+                            <option>Feedback</option>
+                            <option>Something else</option>
+                        </select></label>
+                    <label>Your message<textarea name="message" placeholder="Tell us a little more..." required=""
+                            rows="5"></textarea></label>
+                    <button class="button button-dark" type="submit">Send your message <span>↗</span></button>
+                    <p aria-live="polite" class="form-message"></p><small class="form-note">This demo form shows a
+                        confirmation in
+                        your browser. Connect a backend to receive messages.</small>
+                </form>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer grid">
+            <a class="logo" href="index.html">Nostra</a>
+            <p>Everyday, elevated.</p>
+            <div>
+                <a href="collections.html">Collections</a>
+                <a href="contact.html">Contact</a>
+                <a href="index.html">home</a>
+            </div>
+            <small>© 2026 Nostra. Made for everyday living.</small>
+        </footer>
+
+        <!-- Script JS -->
+        <script src="./script.js">    </script>
+    </body>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Nostra — thoughtfully chosen essentials for everyday living." name="description" />
+
+    <title>Nostra</title>
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Google Font Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN Link from "https://www.jsdelivr.com/"-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./resposive.css" />
+</head>
+
+<body>
+
+    <!-- Announcement -->
+    <div class="announcement" id="announcement">
+        <span>
+            Sign Up and <strong>GET 20% OFF</strong> for your first Order
+        </span>
+
+        <button id="closeAnnouncement" class="announcement-close" aria-label="Close promotion" type="button">
+            ×
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header id="home" class="site-header flex items-center justify-between">
+
+        <a class="logo" href="index.html">Nostra</a>
+        <button aria-expanded="false" aria-label="Open navigation" class="menu-toggle">☰</button>
+
+        <nav class="main-nav flex items-center ">
+            <a class="active" href="index.html">Home</a>
+            <a href="index.html#new-arrival">New Arrival</a>
+            <a href="index.html#most-wanted">Most Wanted</a>
+            <a href="collections.html">Collections</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <a class="header-cta" href="collections.html">Explore shop <span>↗</span></a>
+
+    </header>
+
+    <main class="w-full">
+
+        <!-- Slider -->
+        <div class="sliderContainer">
+
+            <div class="containerSlide">
+                <div class="slide">
+                    <!-- ITEM 1 -->
+                    <div class="itemSlide"
+                        style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url('./Images/hero_01.avif')">
+                        <div class="contentSlide">
+                            <div class="nameSlide">Level up your style with our</div>
+                            <p class="paraSlide">Discover the Latest Summer Collection</p>
+                            <a class="slide-button" href="collections.html">Shop Now →</a>
+                        </div>
+                    </div>
+                    <!-- ITEM 2 -->
+                    <div class="itemSlide"
+                        style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url('./Images/hero_02.avif')">
+                        <div class="contentSlide">
+                            <div class="nameSlide">Find your everyday favourites</div>
+                            <p class="paraSlide">Explore Fresh Styles and New Arrivals</p>
+                            <a class="slide-button" href="collections.html">Shop Now →</a>
+                        </div>
+                    </div>
+                    <!-- ITEM 3 -->
+                    <div class="itemSlide"
+                        style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url('./Images/hero_03.avif')">
+                        <div class="contentSlide">
+                            <div class="nameSlide">Dress Better, Feel Better</div>
+                            <p class="paraSlide">Everyday Essentials for Every Occasion</p>
+                            <a class="slide-button" href="collections.html">Shop Now →</a>
+                        </div>
+                    </div>
+                    <!-- ITEM 4 -->
+                    <div class="itemSlide"
+                        style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url('./Images/hero_01.avif')">
+                        <div class="contentSlide">
+                            <div class="nameSlide">Discover What Everyone Loves</div>
+                            <p class="paraSlide">Shop the Most Wanted Fashion Trends</p>
+                            <a class="slide-button" href="collections.html">Shop Now →</a>
+                        </div>
+                    </div>
+                    <!-- ITEM 5 -->
+                    <div class="itemSlide"
+                        style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url('./Images/hero_02.avif')">
+                        <div class="contentSlide">
+                            <div class="nameSlide">Your Style, Your Statement</div>
+                            <p class="paraSlide">Grab Your Favourite Styles at Special Prices</p>
+                            <a class="slide-button" href="collections.html">Shop Now →</a>
+                        </div>
+                    </div>
+                    <!-- ITEM 6 -->
+                    <div class="itemSlide"
+                        style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url('./Images/hero_03.avif')">
+                        <div class="contentSlide">
+                            <div class="nameSlide">Make Every Outfit Count</div>
+                            <p class="paraSlide">Timeless Fashion That Defines You</p>
+                            <a class="slide-button" href="collections.html">Shop Now →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slideBtn">
+                <button class="prevBtn sBtn"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="nextBtn sBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Nostra values -->
+        <section class="ticker">
+            <div>
+                GOOD DESIGN, GOOD DAYS <span>✳</span>
+                MADE FOR EVERYDAY <span>✳</span>
+                A LITTLE MORE YOU <span>✳</span>
+                GOOD DESIGN, GOOD DAYS <span>✳</span>
+            </div>
+        </section>
+
+        <!-- categories section-->
+        <section class="section categories" id="new-arrival">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">FIND YOUR FAVOURITE</p>
+                    <h2>A little something<br /><em>for every day.</em></h2>
+                </div><a class="text-link" href="collections.html">View all collections ↗</a>
+            </div>
+            <div class="category-grid">
+                <a class="category-card" href="collections.html?category=Home"><img class="max-w-full"
+                        alt="Warm home decor"
+                        src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&amp;fit=crop&amp;w=900&amp;q=80" /><span>01
+                        / HOME</span>
+                    <h3>Make it yours <b>↗</b></h3>
+                </a>
+                <a class="category-card" href="collections.html?category=Style"><img class="max-w-full"
+                        alt="Modern everyday style"
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;w=900&amp;q=80" /><span>02
+                        / STYLE</span>
+                    <h3>Wear your story <b>↗</b></h3>
+                </a>
+                <a class="category-card" href="collections.html?category=Living"><img class="max-w-full"
+                        alt="Everyday lifestyle essentials"
+                        src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&amp;fit=crop&amp;w=900&amp;q=80" /><span>03
+                        / LIVING</span>
+                    <h3>Little daily joys <b>↗</b></h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- wanted-section -->
+        <section class="wanted-section" id="most-wanted">
+            <div class="wanted-heading">
+                <div>
+                    <h2>Most Wanted</h2>
+                    <p>Tap the heart to save your favourites</p>
+                </div>
+                <div class="wanted-controls">
+                    <button type="button" class="wanted-arrow wanted-prev" aria-label="Scroll products left">‹</button>
+                    <button type="button" class="wanted-arrow wanted-next" aria-label="Scroll products right">›</button>
+                </div>
+            </div>
+            <div class="wanted-scroll" tabindex="0" aria-label="Most wanted products carousel">
+                <article class="wanted-item" data-id="wanted-black">
+                    <div class="wanted-image"><img alt="Black casual shirt"
+                            src="https://images.unsplash.com/photo-1598032895397-b9472444bf93?auto=format&amp;fit=crop&amp;w=650&amp;q=80" /><span
+                            class="sale-tag">sale</span>
+                        <button aria-label="Add black shirt to favourites" aria-pressed="false"
+                            class="wish-button">♡</button>
+                    </div>
+                    <h3>Classic Black Shirt</h3>
+                </article>
+                <article class="wanted-item" data-id="wanted-floral">
+                    <div class="wanted-image"><img alt="Floral casual shirt"
+                            src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&amp;fit=crop&amp;w=650&amp;q=80" /><span
+                            class="sale-tag">sale</span><button aria-label="Add floral shirt to favourites"
+                            aria-pressed="false" class="wish-button">♡</button></div>
+                    <h3>Floral Summer Shirt</h3>
+                </article>
+                <article class="wanted-item" data-id="wanted-blue">
+                    <div class="wanted-image"><img alt="Blue shirt"
+                            src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&amp;fit=crop&amp;w=650&amp;q=80" /><span
+                            class="sale-tag">sale</span><button aria-label="Add blue shirt to favourites"
+                            aria-pressed="false" class="wish-button">♡</button></div>
+                    <h3>Blue Everyday Shirt</h3>
+                </article>
+                <article class="wanted-item" data-id="wanted-tan">
+                    <div class="wanted-image"><img alt="Casual shirt"
+                            src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&amp;fit=crop&amp;w=650&amp;q=80" /><span
+                            class="sale-tag">sale</span><button aria-label="Add tan shirt to favourites"
+                            aria-pressed="false" class="wish-button">♡</button></div>
+                    <h3>Everyday Casual Shirt</h3>
+                </article>
+                <article class="wanted-item" data-id="wanted-white">
+                    <div class="wanted-image"><img alt="White shirt"
+                            src="https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?auto=format&amp;fit=crop&amp;w=650&amp;q=80" /><span
+                            class="sale-tag">sale</span><button aria-label="Add white shirt to favourites"
+                            aria-pressed="false" class="wish-button">♡</button></div>
+                    <h3>Essential White Shirt</h3>
+                </article>
+                <article class="wanted-item" data-id="wanted-floral">
+                    <div class="wanted-image"><img alt="Floral casual shirt"
+                            src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&amp;fit=crop&amp;w=650&amp;q=80" /><span
+                            class="sale-tag">sale</span><button aria-label="Add floral shirt to favourites"
+                            aria-pressed="false" class="wish-button">♡</button></div>
+                    <h3>Floral Summer Shirt</h3>
+                </article>
+                <article class="wanted-item" data-id="wanted-blue">
+                    <div class="wanted-image"><img alt="Blue shirt"
+                            src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&amp;fit=crop&amp;w=650&amp;q=80" /><span
+                            class="sale-tag">sale</span><button aria-label="Add blue shirt to favourites"
+                            aria-pressed="false" class="wish-button">♡</button></div>
+                    <h3>Blue Everyday Shirt</h3>
+                </article>
+                <article class="wanted-item" data-id="wanted-tan">
+                    <div class="wanted-image"><img alt="Casual shirt"
+                            src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&amp;fit=crop&amp;w=650&amp;q=80" /><span
+                            class="sale-tag">sale</span><button aria-label="Add tan shirt to favourites"
+                            aria-pressed="false" class="wish-button">♡</button></div>
+                    <h3>Everyday Casual Shirt</h3>
+                </article>
+                <article class="wanted-item" data-id="wanted-white">
+                    <div class="wanted-image"><img alt="White shirt"
+                            src="https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?auto=format&amp;fit=crop&amp;w=650&amp;q=80" /><span
+                            class="sale-tag">sale</span><button aria-label="Add white shirt to favourites"
+                            aria-pressed="false" class="wish-button">♡</button></div>
+                    <h3>Essential White Shirt</h3>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured-band -->
+        <section class="featured-band" id="limited-offer">
+            <div class="featured-image"><img class="max-w-full" alt="Calm, curated living space"
+                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" />
+            </div>
+            <div class="featured-copy">
+                <p class="eyebrow">A NOTE FROM NOSTRA</p>
+                <h2>Everyday things.<br /><em>Extraordinary feeling.</em></h2>
+                <p>We believe the things around us should feel as good as they look. Nostra brings together useful,
+                    beautiful
+                    pieces that make ordinary moments feel a little more special.</p>
+                <a class="button button-outline" href="collections.html">Find your next favourite ↗</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer grid">
+        <a class="logo" href="index.html">Nostra</a>
+        <p>Everyday, elevated.</p>
+        <div>
+            <a href="collections.html">Collections</a>
+            <a href="contact.html">Contact</a>
+            <a href="#home">home</a>
+        </div>
+        <small>© 2026 Nostra. Made for everyday living.</small>
+    </footer>
+
+
+
+    <!-- Script JS -->
+    <script src="./script.js">    </script>
+</body>
+
+</html>

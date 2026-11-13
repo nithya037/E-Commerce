@@ -1,0 +1,427 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Nostra — thoughtfully chosen essentials for everyday living." name="description" />
+
+    <title>Nostra</title>
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN Link from "https://www.jsdelivr.com/"-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./collection.css" />
+    <link rel="stylesheet" href="./contact.css" />
+    <link rel="stylesheet" href="./resposive.css" />
+</head>
+
+<body>
+    <!-- Announcement -->
+    <div class="announcement" id="announcement">
+        <span>
+            Sign Up and <strong>GET 20% OFF</strong> for your first Order
+        </span>
+
+        <button id="closeAnnouncement" class="announcement-close" aria-label="Close promotion" type="button">
+            ×
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header id="home" class="site-header flex items-center justify-between">
+        <a class="logo" href="index.html">Nostra</a>
+        <button aria-expanded="false" aria-label="Open navigation" class="menu-toggle">
+            ☰
+        </button>
+
+        <nav class="main-nav flex items-center">
+            <a href="index.html">Home</a>
+            <a href="index.html#new-arrival">New Arrival</a>
+            <a href="index.html#most-wanted">Most Wanted</a>
+            <a class="active" href="collections.html">Collections</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <a class="header-cta" href="collections.html">Explore shop <span>↗</span></a>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Collection Hero -->
+        <section class="collection-hero">
+            <p class="eyebrow">THE NOSTRA SHOP / 2026</p>
+
+            <h1>Find your <em>everyday.</em></h1>
+
+            <p>
+                Good things, thoughtfully picked. Find the pieces that feel like you.
+            </p>
+
+            <div class="collection-count">
+                <span>OUR COLLECTION</span>
+
+                <span id="result-count">8 PIECES</span>
+            </div>
+        </section>
+
+        <!-- Shop Layout -->
+        <section class="shop-layout">
+            <!-- Filter Sidebar -->
+            <aside class="filters">
+                <div class="filter-title">
+                    <h2>Refine your search</h2>
+
+                    <button class="clear-button" id="clear-filters">Clear all</button>
+                </div>
+
+                <!-- Search -->
+                <label class="search-box">
+                    <span>⌕</span>
+
+                    <input aria-label="Search products" id="product-search" placeholder="Search products..."
+                        type="search" />
+                </label>
+
+                <!-- Occasion -->
+                <div class="filter-group">
+                    <h3>Occasion</h3>
+
+                    <label>
+                        <input type="checkbox" class="occasion-filter" value="Summer" />
+                        Summer
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="occasion-filter" value="Party" />
+                        Party
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="occasion-filter" value="Beach" />
+                        Beach
+                    </label>
+                </div>
+
+                <!-- Colors -->
+                <div class="filter-group">
+                    <h3>Colors</h3>
+
+                    <label>
+                        <input type="checkbox" class="color-filter" value="Red" />
+                        Red
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="color-filter" value="Blue" />
+                        Blue
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="color-filter" value="White" />
+                        White
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="color-filter" value="Green" />
+                        Green
+                    </label>
+                </div>
+
+                <!-- Category -->
+                <div class="filter-group">
+                    <h3>Category</h3>
+
+                    <label>
+                        <input checked name="category" type="radio" value="All" />
+                        All pieces
+                    </label>
+
+                    <label>
+                        <input name="category" type="radio" value="Home" />
+                        Home
+                    </label>
+
+                    <label>
+                        <input name="category" type="radio" value="Style" />
+                        Style
+                    </label>
+
+                    <label>
+                        <input name="category" type="radio" value="Living" />
+                        Living
+                    </label>
+                </div>
+
+                <!-- Price Range -->
+                <div class="filter-group">
+                    <h3>Price range</h3>
+
+                    <div class="price-value">
+                        Up to <strong id="price-value">₹5,000</strong>
+                    </div>
+
+                    <input id="price-filter" max="5000" min="500" step="100" type="range" value="5000" />
+
+                    <div class="range-labels">
+                        <span>₹500</span>
+                        <span>₹5,000</span>
+                    </div>
+                </div>
+
+                <!-- Sort -->
+                <div class="filter-group">
+                    <h3>Sort by</h3>
+
+                    <select aria-label="Sort products" id="sort-products">
+                        <option value="featured">Featured</option>
+
+                        <option value="low">Price: low to high</option>
+
+                        <option value="high">Price: high to low</option>
+
+                        <option value="az">Name: A to Z</option>
+                    </select>
+                </div>
+            </aside>
+
+            <!-- Products Area -->
+            <div class="products-area">
+                <div class="products-top">
+                    <span>THE GOOD STUFF</span>
+
+                    <span>Made for everyday living ✳</span>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid" id="product-grid">
+                    <!-- Product 1 -->
+                    <article class="product-card" data-id="product-1" data-name="Sculpted ceramic vase"
+                        data-category="Home" data-color="White" data-occasion="Party" data-price="1490">
+                        <div class="product-image">
+                            <img alt="Sculpted ceramic vase"
+                                src="./Images/pro01.avif" />
+
+                            <span class="product-tag"> BESTSELLER </span>
+
+                            <button aria-label="Add black shirt to favourites" aria-pressed="false" class="wish-button">
+                                ♡
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div>
+                                <h3>Sculpted Ceramic Vase</h3>
+                                <p>HOME · DECOR</p>
+                            </div>
+
+                            <strong>₹1,490</strong>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card" data-id="product-2" data-name="Everyday tote bag"
+                        data-category="Style" data-color="Green" data-occasion="Beach" data-price="990">
+                        <div class="product-image">
+                            <img alt="Neutral everyday tote bag"
+                                src="./Images/pro02.avif" />
+
+                            <button class="wish-button" aria-label="Add Everyday tote bag to favourites"
+                                aria-pressed="false">
+                                ♡
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div>
+                                <h3>Everyday Tote Bag</h3>
+                                <p>STYLE · ACCESSORIES</p>
+                            </div>
+
+                            <strong>₹990</strong>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card" data-id="product-3" data-name="Ribbed glass bottle"
+                        data-category="Living" data-color="Blue" data-occasion="Summer" data-price="790">
+                        <div class="product-image">
+                            <img alt="Reusable glass bottle"
+                                src="./Images/pro03.avif" />
+
+                            <span class="product-tag">NEW</span>
+
+                            <button class="wish-button" aria-label="Add Ribbed glass bottle to favourites"
+                                aria-pressed="false">
+                                ♡
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div>
+                                <h3>Ribbed Glass Bottle</h3>
+                                <p>LIVING · DAILY ESSENTIALS</p>
+                            </div>
+
+                            <strong>₹790</strong>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="product-card" data-id="product-4" data-name="Soft form cushion" data-category="Home"
+                        data-color="White" data-occasion="Party" data-price="1290">
+                        <div class="product-image">
+                            <img alt="Soft neutral cushion"
+                                src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=700&q=80" />
+
+                            <button class="wish-button" aria-label="Add Soft form cushion to favourites"
+                                aria-pressed="false">
+                                ♡
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div>
+                                <h3>Soft Form Cushion</h3>
+                                <p>HOME · TEXTILES</p>
+                            </div>
+
+                            <strong>₹1,290</strong>
+                        </div>
+                    </article>
+
+                    <!-- Product 5 -->
+                    <article class="product-card" data-id="product-5" data-name="Weekend sunglasses"
+                        data-category="Style" data-color="Red" data-occasion="Beach" data-price="1790">
+                        <div class="product-image">
+                            <img alt="Minimal sunglasses"
+                                src="./Images/pro05.avif" />
+
+                            <button class="wish-button" aria-label="Add Weekend sunglasses to favourites"
+                                aria-pressed="false">
+                                ♡
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div>
+                                <h3>Weekend Sunglasses</h3>
+                                <p>STYLE · ACCESSORIES</p>
+                            </div>
+
+                            <strong>₹1,790</strong>
+                        </div>
+                    </article>
+
+                    <!-- Product 6 -->
+                    <article class="product-card" data-id="product-6" data-name="Calm ceramic mug"
+                        data-category="Living" data-color="White" data-occasion="Summer" data-price="650">
+                        <div class="product-image">
+                            <img alt="Ceramic coffee mug"
+                                src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=700&q=80" />
+
+                            <button class="wish-button" aria-label="Add Calm ceramic mug to favourites"
+                                aria-pressed="false">
+                                ♡
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div>
+                                <h3>Calm Ceramic Mug</h3>
+                                <p>LIVING · TABLEWARE</p>
+                            </div>
+
+                            <strong>₹650</strong>
+                        </div>
+                    </article>
+
+                    <!-- Product 7 -->
+                    <article class="product-card" data-id="product-7" data-name="Natural carry pouch"
+                        data-category="Style" data-color="Green" data-occasion="Beach" data-price="850">
+                        <div class="product-image">
+                            <img alt="Neutral everyday pouch"
+                                src="./Images/pro07.avif" />
+
+                            <button class="wish-button" aria-label="Add Natural carry pouch to favourites"
+                                aria-pressed="false">
+                                ♡
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div>
+                                <h3>Natural Carry Pouch</h3>
+                                <p>STYLE · ACCESSORIES</p>
+                            </div>
+
+                            <strong>₹850</strong>
+                        </div>
+                    </article>
+
+                    <!-- Product 8 -->
+                    <article class="product-card" data-id="product-8" data-name="Linen table runner"
+                        data-category="Home" data-color="Red" data-occasion="Party" data-price="2190">
+                        <div class="product-image">
+                            <img alt="Minimal dining table setting"
+                                src="./Images/pro08.avif" />
+
+                            <button class="wish-button" aria-label="Add Linen table runner to favourites"
+                                aria-pressed="false">
+                                ♡
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div>
+                                <h3>Linen Table Runner</h3>
+                                <p>HOME · TEXTILES</p>
+                            </div>
+
+                            <strong>₹2,190</strong>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state" hidden id="empty-state">
+                    <span>✳</span>
+
+                    <h3>No pieces found.</h3>
+
+                    <p>Try a different search or clear your filters.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer grid">
+        <a class="logo" href="index.html">Nostra</a>
+        <p>Everyday, elevated.</p>
+        <div>
+            <a href="collections.html">Collections</a>
+            <a href="contact.html">Contact</a>
+            <a href="index.html">home</a>
+        </div>
+        <small>© 2026 Nostra. Made for everyday living.</small>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+    <script src="./collections.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+/* Contact */
+.contact-hero {
+  padding: 85px 12% 70px;
+  background: #e9e5d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-hero h1 {
+  font-size: 65px;
+}
+.contact-hero > div > p:not(.eyebrow) {
+  max-width: 390px;
+  line-height: 1.8;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 20px;
+}
+.contact-stamp {
+  width: 125px;
+  height: 125px;
+  border: 1px solid #c7b9a9;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font: 500 11px var(--serif);
+  line-height: 1.1;
+  color: var(--accent);
+  transform: rotate(10deg);
+}
+.contact-layout {
+  padding: 85px 12%;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 10%;
+}
+.contact-details h2 {
+  font-size: 38px;
+}
+.contact-details > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 300px;
+  margin: 20px 0 35px;
+}
+.detail-item {
+  border-top: 1px solid var(--line);
+  padding: 17px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.detail-item span {
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  font-weight: 700;
+}
+.detail-item strong,
+.detail-item a {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: transparent;
+  padding: 13px;
+  font-size: 11px;
+  outline: none;
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+}
+.contact-form .button {
+  align-self: flex-start;
+}
+.form-message {
+  font-size: 11px;
+  color: var(--accent);
+  margin: 0;
+}
+.form-note {
+  font-size: 9px;
+  color: var(--muted);
+  line-height: 1.6;
+}
